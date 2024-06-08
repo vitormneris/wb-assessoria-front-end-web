@@ -50,19 +50,16 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center" >
               <ul class="navbar-nav" >
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="about.html" data-translate-key="about">Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">Sobre </a>
+                  <a class="nav-link" href="do.html" data-translate-key="services">Serviços </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="do.html">Serviços </a>
+                  <a class="nav-link" href="processo.html" data-translate-key="process">Processos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="processo.html">Processos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contato</a>
+                  <a class="nav-link" href="contact.html" data-translate-key="contact_nav">Contato</a>
                 </li>
               </ul>
               <div class="user_option">
@@ -72,6 +69,12 @@
                 <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                   <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
                 </form>
+              </div>
+              <div class="language-selector">
+                <select id="language-select" onchange="translatePage()">
+                  <option value="pt">Português</option>
+                  <option value="en">English</option>
+                </select>
               </div>
             </div>
           </div>
@@ -95,11 +98,11 @@
         <div class="col-md-7">
           <div class="detail-box">
             <div class="heading_container">
-              <h2>
+              <h2 data-translate-key="who_we_are">
                 Quem somos nós?
               </h2>
             </div>
-            <p>
+            <p data-translate-key="about_us">
               Welcome to Brasil é mais que um escritório de assessoria migratória, é o seu parceiro confiável na jornada para se tornar brasileiro. Com uma abordagem humanizada e especializada, eles facilitam o processo de obtenção do RNM e guia seus clientes em cada passo até que seus documentos sejam cuidadosamente analisados pela Polícia Federal. WB Preza pela a humanização, respeitando, cuidando e dando uma atenção personalizada, garantindo uma experiência tranquila e transparente em sua transição para a cidadania brasileira. 
             </p>
           </div>
@@ -117,7 +120,7 @@
       <div class="row">
         <div class="col-md-3">
           <div class="info_contact">
-            <h5>
+            <h5 data-translate-key="about">
               Sobre
             </h5>
             <div>
@@ -148,7 +151,7 @@
         </div>
         <div class="col-md-3">
           <div class="info_info">
-            <h5>
+            <h5 data-translate-key="infos">
               Informações
             </h5>
             <p>
@@ -159,7 +162,7 @@
 
         <div class="col-md-3">
           <div class="info_insta">
-            <h5>
+            <h5 data-translate-key="social_media">
               Redes sociais
             </h5>
             <div class="insta_container">
@@ -180,12 +183,12 @@
         </div>
         <div class="col-md-3">
           <div class="info_form ">
-            <h5>
+            <h5 data-translate-key="news">
               Para receber novidades:
             </h5>
             <form action="">
-              <input type="email" placeholder="Insira seu email">
-              <button>
+              <input type="email" placeholder="Email">
+              <button data-translate-key="send">
                 Enviar
               </button>
             </form>
@@ -211,28 +214,8 @@
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
-  <!-- owl carousel script 
-    -->
-  <script type="text/javascript">
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 0,
-      navText: [],
-      center: true,
-      autoplay: true,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        1000: {
-          items: 3
-        }
-      }
-    });
-  </script>
   <!-- end owl carousel script -->
-
+  <script src="js/translate.js"></script>
 </body>
 
 </html>

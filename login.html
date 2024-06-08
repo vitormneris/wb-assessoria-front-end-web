@@ -52,22 +52,19 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center" >
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav" >
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="about.html" data-translate-key="about">Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">Sobre </a>
+                  <a class="nav-link" href="do.html" data-translate-key="services">Serviços </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="do.html">Serviços </a>
+                  <a class="nav-link" href="processo.html" data-translate-key="process">Processos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="processo.html">Processos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contato</a>
+                  <a class="nav-link" href="contact.html" data-translate-key="contact_nav">Contato</a>
                 </li>
               </ul>
               <div class="user_option">
@@ -77,6 +74,12 @@
                 <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                   <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
                 </form>
+              </div>
+              <div class="language-selector">
+                <select id="language-select" onchange="translatePage()">
+                  <option value="pt">Português</option>
+                  <option value="en">English</option>
+                </select>
               </div>
             </div>
           </div>
@@ -94,7 +97,7 @@
             <form class="login100-form validate-form">
                 <span class="login100-form-title p-b-26">LOGIN</span>
                 <br>
-                <div class="wrap-input100 validate-input" data-validate="Insira um E-mail ou CPF válido">
+                <div class="wrap-input100 validate-input"  data-validate="Insira um E-mail ou CPF válido">
                     <input class="input100" type="text" name="email">
                     <span class="focus-input100" data-placeholder="Insira o E-mail ou CPF"></span>
                 </div>
@@ -134,7 +137,7 @@
       <div class="row">
         <div class="col-md-3">
           <div class="info_contact">
-            <h5>
+            <h5 data-translate-key="about">
               Sobre
             </h5>
             <div>
@@ -165,7 +168,7 @@
         </div>
         <div class="col-md-3">
           <div class="info_info">
-            <h5>
+            <h5 data-translate-key="infos">
               Informações
             </h5>
             <p>
@@ -176,7 +179,7 @@
 
         <div class="col-md-3">
           <div class="info_insta">
-            <h5>
+            <h5 data-translate-key="social_media">
               Redes sociais
             </h5>
             <div class="insta_container">
@@ -197,12 +200,12 @@
         </div>
         <div class="col-md-3">
           <div class="info_form ">
-            <h5>
+            <h5 data-translate-key="news">
               Para receber novidades:
             </h5>
             <form action="">
-              <input type="email" placeholder="Insira seu email">
-              <button>
+              <input type="email" placeholder="Email">
+              <button data-translate-key="send">
                 Enviar
               </button>
             </form>
@@ -223,7 +226,7 @@
     </p>
   </section>
   <!-- footer section -->
-
+  <script src="js/translate.js"></script>
 </body>
 
 </html>
