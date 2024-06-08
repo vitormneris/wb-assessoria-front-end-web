@@ -104,7 +104,7 @@
               </div>
                 <form class ="ProcessoForm" method="POST" id ="processoForm">
                   <div>
-                    <input id="numeroProcesso" type="text" placeholder="Digite o número do processo"  style="padding-right: 40px; background-image: url('images/lupa.png'); background-repeat: no-repeat; background-position: right 10px center; background-size: 20px; color:black;">
+                    <input id="numeroProcesso" type="text" placeholder="Digite o número do processo"  style="padding-right: 40px; background-image: url(""); background-repeat: no-repeat; background-position: right 10px center; background-size: 20px; color:black;">
                   </div>
                   
                   <div class="d-flex justify-content-center">
@@ -183,7 +183,7 @@
                     <img src="images/insta.png" alt="instagramLogo" style="width: 30px;">
                   </div>
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=5511914258886&text=Ol%C3%A1%2C%20Welcome2Brazil!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%20%F0%9F%87%A7%F0%9F%87%B7" target="_blank"">
+                <a href="https://api.whatsapp.com/send?phone=5511914258886&text=Ol%C3%A1%2C%20Welcome2Brazil!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%20%F0%9F%87%A7%F0%9F%87%B7" target="_blank">
                   <div class="insta-box b-2">
                     <img src="images/whats.png" alt="whastappLogo" style="width: 30px;">
                   </div>
@@ -226,6 +226,29 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="API/ProcessRoutes.js"></script>
   <script src="js/translate.js"></script>
+  <script src="js/Authenticate.js"></script>
+
+  <!-- owl carousel script -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      navText: [],
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  </script>
+  <!-- end owl carousel script -->
+
 </body>
 
 </html>
