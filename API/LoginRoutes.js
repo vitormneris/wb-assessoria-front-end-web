@@ -25,7 +25,18 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             window.location.href = "processo.html"
             return "Login sucessfully"
         }
+        const div  = document.getElementById('errorMessage')
+        const existingParag = div.querySelector('p');
+        
+        if (!existingParag) {
+            const parag = document.createElement('p');
+            parag.textContent = "E-mail ou senha não encontrados"
+            parag.setAttribute("style", "color: red;");
+            div.appendChild(parag)
+        }
+        
         return "Login not authorized"
+
     })
     .then(data => {
         console.log(data)
