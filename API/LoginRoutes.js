@@ -9,7 +9,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         "password": password
     }
 
-    fetch('https://wb-backend-48ug.onrender.com/usuarios/authenticate', {
+// https://wb-backend-48ug.onrender.com/usuarios/authenticate
+// http://localhost:8080/usuarios/authenticate
+
+    fetch('http://localhost:8080/usuarios/authenticate', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
