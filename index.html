@@ -31,8 +31,10 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-    <!-- Menu dropDown style -->
-    <link href="css/menuDropdown.css" rel="stylesheet" />
+  <!-- Menu dropDown style -->
+  <link href="css/menuDropdown.css" rel="stylesheet" />
+
+  <script src="js/ocultCode.js"></script>
 </head>
 
 <body>
@@ -51,6 +53,23 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div id="dropdown" class="dropdown">
+              <button class="dropbtn">Perfil</button>
+              <div class="dropdown-content">
+                <a href="mensalidades.html">Mensalidades</a>
+                <a href="#" onclick="logOut()">Log out</a>
+              </div>
+            </div>
+
+            <div id="register">
+              <ul class="navbar-nav" >
+                <li class="nav-item">
+                  <a class="nav-link" href="cadastro.html">Cadastre-se</a>
+                </li>
+              </ul>
+            </div>
+
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav" >
                 <li class="nav-item">
@@ -67,7 +86,7 @@
                 </li>
               </ul>
               <div class="user_option">
-                <a href="login.html">
+                <a id="loginUser" href="login.html">
                   <img src="images/user.png" alt="">
                 </a>
                 <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -564,6 +583,6 @@
   </script>
   <!-- end owl carousel script -->
   <script src="js/translate.js"></script>
+  <script src="js/logOut.js"></script>
 </body>
-
 </html>
