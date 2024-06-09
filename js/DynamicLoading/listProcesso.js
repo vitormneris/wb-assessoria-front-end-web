@@ -2,7 +2,10 @@ const list = document.getElementById("ListagemProcessos")
 
 let sessionData = JSON.parse(sessionStorage.getItem('data'))
 
+console.log(sessionData);
+
 sessionData.forEach(element => {
+    const nomeProcesso = element.informations.classe.nome;
     const numeroProcesso = element.informations.numeroProcesso.numerdoDoprocesso;
     const tribunal = element.informations.tribunal;
     const movimentoNome = element.movimentoMaisRecente.nome;
@@ -15,8 +18,9 @@ sessionData.forEach(element => {
                     <div class="align-self-center">
                         <i class="icon-wallet success font-large-2" style="padding: 0 20px 0 0; color: rgb(233, 179, 16);"></i>
                     </div>
-                    <div class="media-body">
-                        <h4>N° do Processo: ${numeroProcesso}</h4>
+                    <div class="media-body">                        
+                        <h5>Nome do Processo: ${nomeProcesso}</h5>
+                        <h5>N° do Processo: ${numeroProcesso}</h5>
                         <details>
                             <summary>Detalhes</summary>
                             <div class="d-flex flex-column">
