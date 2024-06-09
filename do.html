@@ -52,14 +52,6 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <div id="dropdown" class="dropdown">
-              <button class="dropbtn">Perfil</button>
-              <div class="dropdown-content">
-                <a href="mensalidades.html">Mensalidades</a>
-                <a href="#" onclick="logOut()">Log out</a>
-              </div>
-            </div>
-
             <div id="register">
               <ul class="navbar-nav" >
                 <li class="nav-item">
@@ -84,9 +76,21 @@
                 </li>
               </ul>
               <div class="user_option">
-                <a href="login.html">
-                  <img src="images/user.png" alt="">
-                </a>
+
+                <div id="loginUser" >
+                  <a href="login.html">
+                    <img src="images/user.png" alt="">
+                  </a>
+                </div>
+
+                <div id="dropdown" class="dropdown">
+                  <img class="dropbtn" src="images/user.png" alt="">
+                  <div class="dropdown-content">
+                    <a href="mensalidades.html">Mensalidades</a>
+                    <a href="#" onclick="logOut()">Log out</a>
+                  </div>
+                </div>
+
                 <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                   <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
                 </form>
