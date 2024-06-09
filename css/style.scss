@@ -551,24 +551,25 @@ a:focus {
   .contact-form {
     padding: 25px;
     border-radius: 20px;
+    background-color: #f9f9f9; /* Adicionando um fundo para contraste */
 
-    input {
+    input, .input_message {
       border: none;
       outline: none;
       background-color: transparent;
       width: 100%;
       margin: 15px 0;
       padding: 10px 20px;
-      border: 1px solid rgba($color: #000000, $alpha: .4);
+      border: 1px solid rgba(0, 0, 0, 0.4);
       border-radius: 30px;
+    }
 
-      &.input_message {
-        height: 175px;
-      }
+    .input_message {
+      height: 175px;
+    }
 
-      &::placeholder {
-        color: rgba($color: #000000, $alpha: .4);
-      }
+    input::placeholder, .input_message::placeholder {
+      color: rgba(0, 0, 0, 0.4);
     }
 
     button {
@@ -580,19 +581,55 @@ a:focus {
       background-color: #fec913;
       color: #fff;
       border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
     }
 
-  }
-
-  .map_img-box {
-    width: 80%;
-    margin: 25px auto 0 auto;
-
-    img {
-      width: 100%;
+    button:hover {
+      background-color: #e6b813;
     }
   }
-}
+
+  .contact_section {
+    padding: 50px 0;
+  }
+
+  .contact_section .heading_container {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .contact_section .heading_container h2 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  .contact_section .heading_container p {
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    .contact_section .heading_container h2 {
+      font-size: 28px;
+    }
+
+    .contact_section .heading_container p {
+      font-size: 16px;
+    }
+
+    .contact-form {
+      padding: 15px;
+    }
+
+    .contact-form input, .contact-form .input_message {
+      margin: 10px 0;
+      padding: 8px 15px;
+    }
+
+    .contact-form button {
+      padding: 10px 30px;
+    }
+  }
 
 /* end contact section */
 
@@ -704,5 +741,5 @@ a:focus {
 .footer_section a {
   color: #fbfcfd;
 }
-
+}
 /* end footer section*/

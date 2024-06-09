@@ -526,38 +526,30 @@ a:focus {
 }
 
 /* contact section */
-.contact_section .heading_container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .contact_section .contact-form {
-  width: 530px; /* Largura do contêiner */
-  max-width: 600px; /* Largura máxima do contêiner */
-  padding: 25px;
-  border-radius: 20px;
+  width: 90%; /* Reduz a largura do contêiner para se adaptar a telas menores */
+  max-width: 600px;
   padding: 20px;
-  border-radius: 25px;
+  border-radius: 20px;
   margin: 20px auto;
 }
-
 
 .contact_section .contact-form input {
   border: none;
   outline: none;
   background-color: rgb(231, 239, 249);
   background-image: url('imagens/icone-loupe-noir.png');
-  width: 510px;
+  width: 100%; /* Ajusta a largura do input para ocupar todo o contêiner */
   height: 48px;
   margin: 15px 0;
   padding: 10px 20px;
   border-radius: 30px;
 }
+
 .contact_section .contact-form button {
   border: none;
   outline: none;
-  padding: 12px 50px;
+  padding: 12px 20px; /* Reduz o padding para se adaptar a telas menores */
   text-transform: uppercase;
   margin-top: 25px;
   background-color: #fec913;
@@ -565,18 +557,20 @@ a:focus {
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .contact_section .contact-form button:hover {
   background-color: #ecb911;
 }
 
 .contact_section .map_img-box {
-  width: 80%;
+  width: 100%; /* Ajusta a largura da imagem do mapa para ocupar todo o contêiner pai */
   margin: 25px auto 0 auto;
 }
 
 .contact_section .map_img-box img {
-  width: 100%;
+  width: 100%; /* Garante que a imagem do mapa seja responsiva */
 }
+
 
 /* end contact section */
 .info_section {
