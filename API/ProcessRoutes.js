@@ -3,10 +3,7 @@ document.getElementById('processoForm').addEventListener('submit', function(even
 
     const numeroProcesso = document.getElementById('numeroProcesso').value;
 
-// https://wb-backend-48ug.onrender.com/processos
-// http://localhost:8080/processos
-
-    fetch('http://localhost:8080/processos', {
+    fetch('https://wb-backend-48ug.onrender.com/processos', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
