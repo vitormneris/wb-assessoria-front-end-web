@@ -1,4 +1,6 @@
 document.getElementById('processoForm').addEventListener('submit', function(event) {
+    const token = sessionStorage.getItem("token")
+
     event.preventDefault(); 
 
     const numeroProcesso = document.getElementById('numeroProcesso').value;
@@ -6,6 +8,7 @@ document.getElementById('processoForm').addEventListener('submit', function(even
     fetch('https://wb-backend-48ug.onrender.com/processos', {
         method: 'POST',
         headers: {
+            'Authorization': `Bearer1 ${token}`,
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({ numeroProcesso: numeroProcesso })

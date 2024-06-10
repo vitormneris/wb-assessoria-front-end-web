@@ -1,4 +1,5 @@
 function logOut() {
-    sessionStorage.removeItem("id")
+    sessionStorage.removeItem("token")
+    sessionStorage.removeItem("data")
     window.location.reload(true)
 }
