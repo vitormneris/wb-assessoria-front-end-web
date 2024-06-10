@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         "password": password
     }
 
-    fetch('https://wb-backend-48ug.onrender.com/usuarios/authenticate', {
+    fetch('https://wb-backend-48ug.onrender.com/authenticate', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -18,13 +18,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     })
     .then(response => response.text())
     .then(text => {
-        let result = JSON.parse(text)
-        console.log(result)
-        if (result.message != "Not authorized") {    
-            sessionStorage.setItem("id", result)
+
+        if (text != "") {
+            sessionStorage.setItem("token", text)
             window.location.href = "processo.html"
             return "Login sucessfully"
         }
+
         const div  = document.getElementById('errorMessage')
         const existingParag = div.querySelector('p');
         

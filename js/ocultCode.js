@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const id = sessionStorage.getItem("id")
+    const id = sessionStorage.getItem("token")
 
     if (id != null) {
         document.getElementById('dropdown').style.display = 'block';
