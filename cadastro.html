@@ -78,6 +78,12 @@
                   <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
                 </form>
               </div>
+              <div class="language-selector">
+                <select id="language-select" onchange="translatePage()">
+                  <option value="pt">Português</option>
+                  <option value="en">English</option>
+                </select>
+              </div>
             </div>
           </div>
         </nav>
@@ -91,15 +97,15 @@
     <div class="container">
     <div class="container-login100" >
         <div class="wrap-login100">
-            <form class="login100-form validate-form">
+            <form class="login100-form validate-form" id="insertForm">
                 <span class="login100-form-title p-b-26">CADASTRO</span>
                 <br>
                 <div class="wrap-input100 validate-input" data-validate="Insira o Nome Completo">
-                    <input class="input100" type="text" name="email">
+                    <input class="input100" type="text" id="name">
                     <span class="focus-input100" data-placeholder="Insira o Nome Completo"></span>
                 </div>
                 <div class="wrap-input100 validate-input" data-validate="Insira uma Senha válida">
-                    <input class="input100" type="password" name="senha">
+                    <input class="input100" type="password" id="password">
                     <span class="focus-input100" data-placeholder="Insira a Senha"></span>
                 </div>
                 <br>
@@ -107,23 +113,23 @@
                 <details>
                     <summary>Mais Informações</summary>
                     <div class="wrap-input100 validate-input" data-validate="Insira um E-mail válido">
-                      <input class="input100" type="text" name="email">
+                      <input class="input100" type="text" id="email">
                       <span class="focus-input100" data-placeholder="Insira o E-mail"></span>
                   </div>
                     <div class="wrap-input100 validate-input" data-validate="Insira um CPF válido">
-                        <input class="input100" type="text" name="cpf">
+                        <input class="input100" type="text" id="cpf">
                         <span class="focus-input100" data-placeholder="Insira o CPF"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Insira um RNM válido">
-                        <input class="input100" type="text" name="rnm">
+                        <input class="input100" type="text" id="rnm">
                         <span class="focus-input100" data-placeholder="Insira o RNM"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Insira um País válido">
-                        <input class="input100" type="text" name="pais">
+                        <input class="input100" type="text" id="country">
                         <span class="focus-input100" data-placeholder="Insira o País"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Insira um Número de Telefone válido">
-                        <input class="input100" type="tel" name="telefone">
+                        <input class="input100" type="tel" id="phone">
                         <span class="focus-input100" data-placeholder="Insira o Número de Telefone"></span>
                     </div>
                 </details>
@@ -137,6 +143,7 @@
                         </button>
                     </div>
                 </div>
+                <div id="message"></div>
                 <div class="text-center p-t-115">
                     <span class="txt1">
                         Já possui cadastro?
@@ -249,5 +256,7 @@
     </p>
   </section>
   <!-- footer section -->
-  <script src="js/translate.js"></script></body>
+  <script src="js/translate.js"></script>
+  <script src="API/client/InsertRoutes.js"></script>
+</body>
 </html>
