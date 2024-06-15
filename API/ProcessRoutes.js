@@ -5,7 +5,7 @@ document.getElementById('processoForm').addEventListener('submit', function(even
 
     const numeroProcesso = document.getElementById('numeroProcesso').value;
 
-    fetch('http://localhost:8080/processos', {
+    fetch('https://wb-backend-48ug.onrender.com/processos', {
         method: 'POST',
         headers: {
             'Authorization': `Bearer1 ${token}`,
