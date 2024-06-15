@@ -16,8 +16,9 @@
   <link href="images/logoWB.png" rel="icon">
   <!-- slider stylesheet -->
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
@@ -35,6 +36,12 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    .wrap-login100 {
+      width: 800px;
+    }
+  </style>
 </head>
 
 <body class="sub_page">
@@ -47,13 +54,14 @@
               <img src="images/logoWB.png" alt="logoWB" style="width: 80px; margin-left: 100px;">
             </span>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center" >
-              <ul class="navbar-nav" >
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
@@ -89,76 +97,145 @@
         </nav>
       </div>
     </header>
-  <!-- end header section -->
+    <!-- end header section -->
   </div>
 
   <!-- contact section -->
   <section class="contact_section layout_padding">
     <div class="container">
-    <div class="container-login100" >
+      <div class="container-login100">
         <div class="wrap-login100">
-            <form class="login100-form validate-form" id="insertForm">
-                <span class="login100-form-title p-b-26">CADASTRO</span>
-                <br>
-                <div class="wrap-input100 validate-input" data-validate="Insira o Nome Completo">
-                    <input class="input100" type="text" id="name">
-                    <span class="focus-input100" data-placeholder="Insira o Nome Completo"></span>
-                </div>
-                <div class="wrap-input100 validate-input" data-validate="Insira uma Senha válida">
-                    <input class="input100" type="password" id="password">
-                    <span class="focus-input100" data-placeholder="Insira a Senha"></span>
-                </div>
-                <br>
+          <form class="login100-form validate-form" id="insertForm">
+            <span class="login100-form-title p-b-26">CADASTRO</span>
+            <br>
+            <div class="wrap-input100 validate-input" data-validate="Insira o Nome Completo">
+              <input class="input100" type="text" id="name">
+              <span class="focus-input100" data-placeholder="Insira o Nome Completo"></span>
+            </div>
 
-                <details>
-                    <summary>Mais Informações</summary>
-                    <div class="wrap-input100 validate-input" data-validate="Insira um E-mail válido">
-                      <input class="input100" type="text" id="email">
-                      <span class="focus-input100" data-placeholder="Insira o E-mail"></span>
-                  </div>
-                    <div class="wrap-input100 validate-input" data-validate="Insira um CPF válido">
-                        <input class="input100" type="text" id="cpf">
-                        <span class="focus-input100" data-placeholder="Insira o CPF"></span>
-                    </div>
-                    <div class="wrap-input100 validate-input" data-validate="Insira um RNM válido">
-                        <input class="input100" type="text" id="rnm">
-                        <span class="focus-input100" data-placeholder="Insira o RNM"></span>
-                    </div>
-                    <div class="wrap-input100 validate-input" data-validate="Insira um País válido">
-                        <input class="input100" type="text" id="country">
-                        <span class="focus-input100" data-placeholder="Insira o País"></span>
-                    </div>
-                    <div class="wrap-input100 validate-input" data-validate="Insira um Número de Telefone válido">
-                        <input class="input100" type="tel" id="phone">
-                        <span class="focus-input100" data-placeholder="Insira o Número de Telefone"></span>
-                    </div>
-                </details>
+            <div class="wrap-input100 validate-input" data-validate="Insira um E-mail válido">
+              <input class="input100" type="text" id="email">
+              <span class="focus-input100" data-placeholder="Insira o E-mail"></span>
+            </div>
 
-                <br>
-                <div class="container-login100-form-btn">
-                    <div class="wrap-login100-form-btn">
-                        <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn">
-                            Cadastre-se
-                        </button>
-                    </div>
-                </div>
-                <div id="message"></div>
-                <div class="text-center p-t-115">
-                    <span class="txt1">
-                        Já possui cadastro?
-                    </span>
-                    <a class="txt2" href="login.html">
-                        Faça Login
-                    </a>
-                </div>
-            </form>
+            <div class="wrap-input100 validate-input" data-validate="Insira uma Senha válida">
+              <input class="input100" type="password" id="password">
+              <span class="focus-input100" data-placeholder="Insira a Senha"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate="Insira um CPF válido">
+              <input class="input100" type="text" id="cpf">
+              <span class="focus-input100" data-placeholder="Insira o CPF"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate="Insira um País válido">
+              <input class="input100" type="text" id="country">
+              <span class="focus-input100" data-placeholder="Insira o País"></span>
+            </div>
+            
+            <div class="wrap-input100 validate-input" data-validate="Insira um Número de Telefone válido">
+              <input class="input100" type="tel" id="phone1">
+              <span class="focus-input100" data-placeholder="Insira 1º Número de Telefone"></span>
+            </div>
+
+            <details>
+              <summary>Adicionar mais números de telefone</summary>
+
+              <div class="wrap-input100 validate-input" data-validate="Insira um Número de Telefone válido">
+                <input class="input100" type="tel" id="phone2">
+                <span class="focus-input100" data-placeholder="Insira 2º o Número de Telefone (Opcional)"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input" data-validate="Insira um Número de Telefone válido">
+                <input class="input100" type="tel" id="phone3">
+                <span class="focus-input100" data-placeholder="Insira 3º o Número de Telefone (Opcional)"></span>
+              </div>
+            </details>
+
+            <br>
+
+            <details>
+              <summary>RNM</summary>
+
+              <div class="wrap-input100 validate-input" data-validate="Insira um RNM válido">
+                <input class="input100" type="text" id="rnm">
+                <span class="focus-input100" data-placeholder="Insira o RNM"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input" data-validate="Insira uma data de vencimento válida">
+                <input class="input100" type="date" id="rnmDate">
+                <span class="focus-input100" data-placeholder="Insira a data de vencimento do RNM"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input" data-validate="Insira a classificação do RNM válida">
+                <input class="input100" type="text" id="rnmClassification">
+                <span class="focus-input100" data-placeholder="Insira a classificação do RNM"></span>
+              </div>
+            </details>
+
+            <br>
+
+            <details>
+              <summary>Endereço</summary>
+
+              <div class="wrap-input100 validate-input" data-validate="Insira um estado válido">
+                <input class="input100" type="text" id="state">
+                <span class="focus-input100" data-placeholder="Insira o estado"></span>
+              </div>
+
+
+              <div class="wrap-input100 validate-input" data-validate="Insira uma cidade válida">
+                <input class="input100" type="text" id="city">
+                <span class="focus-input100" data-placeholder="Insira a cidade"></span>
+              </div>
+
+              
+              <div class="wrap-input100 validate-input" data-validate="Insira um bairro válido">
+                <input class="input100" type="text" id="neighborhood">
+                <span class="focus-input100" data-placeholder="Insira o bairro"></span>
+              </div>
+                            
+              <div class="wrap-input100 validate-input" data-validate="Insira uma rua válida">
+                <input class="input100" type="text" id="street">
+                <span class="focus-input100" data-placeholder="Insira a rua"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input" data-validate="Insira um CEP válido">
+                <input class="input100" type="text" id="postalCode">
+                <span class="focus-input100" data-placeholder="Insira o CEP"></span>
+              </div>
+
+              <div class="wrap-input100 validate-input" data-validate="Insira um numero de residência válido">
+                <input class="input100" type="text" id="number">
+                <span class="focus-input100" data-placeholder="Insira o número da residência"></span>
+              </div>
+            </details>
+
+            <br>
+            <div class="container-login100-form-btn">
+              <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <button class="login100-form-btn">
+                  Cadastre-se
+                </button>
+              </div>
+            </div>
+            <div id="message"></div>
+            <div class="text-center p-t-115">
+              <span class="txt1">
+                Já possui cadastro?
+              </span>
+              <a class="txt2" href="login.html">
+                Faça Login
+              </a>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div id="dropDownSelect1"></div>
+  <div id="dropDownSelect1"></div>
 
 
   <!-- info section -->
@@ -219,29 +296,30 @@
                     <img src="images/insta.png" alt="instagramLogo" style="width: 30px;">
                   </div>
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=5511914258886&text=Ol%C3%A1%2C%20Welcome2Brazil!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%20%F0%9F%87%A7%F0%9F%87%B7" target="_blank"">
-                  <div class="insta-box b-2">
-                    <img src="images/whats.png" alt="whastappLogo" style="width: 30px;">
-                  </div>
-                </a>
+                <a href="https://api.whatsapp.com/send?phone=5511914258886&text=Ol%C3%A1%2C%20Welcome2Brazil!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%20%F0%9F%87%A7%F0%9F%87%B7"
+                  target="_blank"">
+                  <div class=" insta-box b-2">
+                  <img src="images/whats.png" alt="whastappLogo" style="width: 30px;">
               </div>
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="info_form ">
-            <h5>
-              Para receber novidades:
-            </h5>
-            <form action="">
-              <input type="email" placeholder="Insira seu email">
-              <button>
-                Enviar
-              </button>
-            </form>
-          </div>
+      </div>
+      <div class="col-md-3">
+        <div class="info_form ">
+          <h5>
+            Para receber novidades:
+          </h5>
+          <form action="">
+            <input type="email" placeholder="Insira seu email">
+            <button>
+              Enviar
+            </button>
+          </form>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -259,4 +337,5 @@
   <script src="js/translate.js"></script>
   <script src="API/client/InsertRoutes.js"></script>
 </body>
+
 </html>
