@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const id = sessionStorage.getItem("token")
+    const token = sessionStorage.getItem("token")
 
-    if (id != null) {
+    if (token != null) {
         document.getElementById('dropdown').style.display = 'block';
         document.getElementById('register').style.display = 'none';
         document.getElementById('loginUser').style.display = 'none';

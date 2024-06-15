@@ -6,8 +6,18 @@ document.getElementById('insertForm').addEventListener('submit', function(event)
     const email = document.getElementById('email').value
     const cpf = document.getElementById('cpf').value
     const rnm = document.getElementById('rnm').value
+    const rnmClassification = document.getElementById('rnmClassification').value
+    const rnmDate = document.getElementById('rnmDate').value
     const country = document.getElementById('country').value
-    const phone = document.getElementById('phone').value
+    const phone1 = document.getElementById('phone1').value
+    const phone2 = document.getElementById('phone2').value
+    const phone3 = document.getElementById('phone3').value
+    const state = document.getElementById('state').value
+    const city = document.getElementById('city').value
+    const neighborhood = document.getElementById('neighborhood').value
+    const street = document.getElementById('street').value
+    const postalCode = document.getElementById('postalCode').value
+    const number = document.getElementById('number').value
 
     newUser = {
         "name": name,
@@ -16,13 +26,23 @@ document.getElementById('insertForm').addEventListener('submit', function(event)
         "cpf": cpf,
         "rnm": { 
             "number": rnm,
-            "classification": "classificacao",
-            "dateOfIssue": "11/10/2025"
+            "classification": rnmClassification,
+            "dateOfIssue": rnmDate
         },
         "country": country,
         "phones": [
-            phone
-        ]
+            phone1,
+            phone2 || null,
+            phone3 || null
+          ].filter(phone => phone !== null),
+        "address": {
+            "state": state,
+            "city": city,
+            "neighborhood": neighborhood,
+            "street": street,
+            "postalCode": postalCode,
+            "number": number
+        }
     }
 
     fetch('https://wb-backend-48ug.onrender.com/clients', {
