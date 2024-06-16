@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         "password": password
     }
 
-    fetch('https://wb-backend-48ug.onrender.com/authenticate', {
+    fetch('http://localhost:8080/authenticate', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -27,13 +27,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
         const div  = document.getElementById('errorMessage')
         const existingParag = div.querySelector('p');
+
+        if (existingParag) existingParag.remove()
         
-        if (!existingParag) {
-            const parag = document.createElement('p');
-            parag.textContent = "E-mail ou senha não encontrados"
-            parag.setAttribute("style", "color: red;");
-            div.appendChild(parag)
-        }
+        const parag = document.createElement('p');
+        parag.textContent = "E-mail ou senha não encontrados"
+        parag.setAttribute("style", "color: red;");
+        div.appendChild(parag)
         
         return "Login not authorized"
 

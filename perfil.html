@@ -12,13 +12,14 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>WB | Consulta Processual</title>
+  <title>WB | Sobre Nós</title>
 
   <link href="images/logoWB.png" rel="icon">
 
   <!-- slider stylesheet -->
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -32,29 +33,72 @@
   <!-- Menu dropDown style -->
   <link href="css/menuDropdown.css" rel="stylesheet" />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
   <script src="js/authenticate.js"></script>
+  <script src="API/client/getRoutes.js"></script>
+
+  <style>
+    .perfil {
+      margin: 0 auto;
+      border: 3px solid black; 
+      border-radius: 25px;
+      width: 900px;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-bottom: 50px;
+    }
+
+    .field {
+      background-color: rgba(214, 214, 214, 0.322);
+      border: 2px solid black; 
+      border-radius: 15px;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .field {
+      font-size: 23px;
+      color: black;
+    }
+
+    .field span {
+      font-size: 20px;
+      color: rgb(59, 59, 59);
+    }
+
+    h1 {
+      color: black;
+      padding-top: 30px;
+    }
+  </style>
 </head>
 
 <body class="sub_page">
+
   <div class="hero_area">
+    <!-- header section strats -->
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+
           <a class="navbar-brand" href="index.html">
             <span>
               <img src="images/logoWB.png" alt="logoWB" style="width: 80px; margin-left: 100px;">
             </span>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav" >
+              <ul class="navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link" id="perfil" href="perfil.html">Perfil</a>
-                </li>                <li class="nav-item">
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="about.html" data-translate-key="about">Sobre </a>
                 </li>
                 <li class="nav-item">
@@ -69,7 +113,7 @@
               </ul>
               <div class="user_option">
 
-                <div class="dropdown">
+                <div id="dropdown" class="dropdown">
                   <img class="dropbtn" src="images/user.png" alt="">
                   <div class="dropdown-content">
                     <a href="mensalidades.html">Mensalidades</a>
@@ -92,50 +136,30 @@
         </nav>
       </div>
     </header>
-  <!-- end header section -->
+    <!-- end header section -->
   </div>
 
-  <!-- contact section -->
 
-  <section class="contact_section layout_padding">
-    <div class="container">
-      <div class="">
-        <div class="">
-          <div class="row">
-            <div class="col-md-9 mx-auto">
-              <div class="contact-form">
-                 <div class="heading_container">
-                <h2 data-translate-key="consulta_processual">
-                  Consulta Processual
-                </h2>
-              
-                <h6 data-translate-key="consulta_desc">
-                  Consultar processos pelo número em um clique
-                </h6>
-                <br>
-              </div>
-                <form class ="ProcessoForm" method="POST" id ="processoForm">
-                  <div>
-                    <input id="numeroProcesso" type="text" placeholder="Digite o número do processo"  style="padding-right: 40px; background-image: url('images/search-icon.png'); background-repeat: no-repeat; background-position: right 10px center; background-size: 20px; color:black;">
-                  </div>
-                  
-                  <div class="d-flex justify-content-center">
-                    <button type="submit" id="submit" data-translate-key="btn_consultar" class="btn_on-hover">
-                      Consultar
-                    </button>
-                  </div>
-                  <div id="errorMessage"></div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- end contact section -->
+  <!-- who section -->
+  <br><br>
+  <div class="perfil">
+    <h1>Perfil</h1>
+    <p class="field">Nome: <span id="name"></span></p>
+    <p class="field">E-mail: <span id="email"></span></p>
+    <p class="field">CPF: <span id="cpf"></span></p>
+    <p class="field">País: <span id="country"></span></p>
+    <p class="field">Telefones: <span id="phone"></span></p>
+    <p class="field">RNM: <span id="rnm"></span></p>
+    <p class="field">Classificação: <span id="rnmClassification"></span></p>
+    <p class="field">Data de validade: <span id="rnmDate"></span></p>
+    <p class="field">Estado: <span id="state"></span></p>
+    <p class="field">Cidade: <span id="city"></span></p>
+    <p class="field">Bairro: <span id="neighborhood"></span></p>
+    <p class="field">Rua: <span id="street"></span></p>
+    <p class="field">Número da residência: <span id="number"></span></p> 
+  </div>
+  <br><br>
+  <!-- end who section -->
 
 
   <!-- info section -->
@@ -196,33 +220,35 @@
                     <img src="images/insta.png" alt="instagramLogo" style="width: 30px;">
                   </div>
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=5511914258886&text=Ol%C3%A1%2C%20Welcome2Brazil!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%20%F0%9F%87%A7%F0%9F%87%B7" target="_blank">
-                  <div class="insta-box b-2">
-                    <img src="images/whats.png" alt="whastappLogo" style="width: 30px;">
-                  </div>
-                </a>
+                <a href="https://api.whatsapp.com/send?phone=5511914258886&text=Ol%C3%A1%2C%20Welcome2Brazil!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%20%F0%9F%87%A7%F0%9F%87%B7"
+                  target="_blank"">
+                  <div class=" insta-box b-2">
+                  <img src="images/whats.png" alt="whastappLogo" style="width: 30px;">
               </div>
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="info_form ">
-            <h5 data-translate-key="news">
-              Para receber novidades:
-            </h5>
-            <form action="">
-              <input type="email" placeholder="Email">
-              <button data-translate-key="send">
-                Enviar
-              </button>
-            </form>
-          </div>
+      </div>
+      <div class="col-md-3">
+        <div class="info_form ">
+          <h5 data-translate-key="news">
+            Para receber novidades:
+          </h5>
+          <form action="">
+            <input type="email" placeholder="Email">
+            <button data-translate-key="send">
+              Enviar
+            </button>
+          </form>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
   <!-- end info_section -->
+
 
   <!-- footer section -->
   <section class="container-fluid footer_section">
@@ -235,32 +261,11 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="API/ProcessRoutes.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- end owl carousel script -->
   <script src="js/translate.js"></script>
   <script src="js/logOut.js"></script>
-
-  <!-- owl carousel script -->
-  <script type="text/javascript">
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 0,
-      navText: [],
-      center: true,
-      autoplay: true,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        1000: {
-          items: 3
-        }
-      }
-    });
-  </script>
-  <!-- end owl carousel script -->
-
 </body>
 
 </html>
