@@ -4,7 +4,7 @@ if (token != null)  {
     fetch('https://wb-backend-48ug.onrender.com/protected', {
         method: 'GET',
         headers: {
-            'Authorization': `Bearer1 ${token}`
+            'Authorization': `Bearer ${token}`
         }
     })
     .then(response => {
