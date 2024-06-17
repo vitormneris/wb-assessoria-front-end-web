@@ -35,6 +35,13 @@
   <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
   <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
   <script src="js/authenticate.js"></script>
+  <script src="API/installment/getRoutes.js"></script>
+
+  <style>
+    .card {
+      width: 900px;
+    }
+  </style>
 </head>
 
 <body class="sub_page">
@@ -104,33 +111,15 @@
         <h2>
           Mensalidades
         </h2>
-      </div>
-    <div class="">
+    </div>
       <div class="">
-        <div class="row">
-          <div class="col-md-9 mx-auto">
-            <div class="card">
-              <div class="card-body cleartfix">
-                <div class="media align-items-stretch">
-                  <div class="align-self-center">
-                    <i class="icon-wallet success font-large-2" style="padding: 0 20px 0 0; color: rgb(233, 179, 16);"></i>
-                  </div>
-                  <div class="media-body">
-                    <h4>N° da parcela: 1/12</h4>
-                      <span style="background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Pendente</span>
-                  </div>
-                  <div class="align-self-center">
-                    <h2>R$350,00</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="">
+          <div class="row">
+            <div id="mensalidades"></div>
           </div>
-        </div>
       </div>
     </div>
   </section>
-
 
   <!-- info section -->
   <section class="info_section ">

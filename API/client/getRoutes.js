@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('https://wb-backend-48ug.onrender.com/clients/token', {
         method: 'GET',
         headers: {
-            'Authorization': `Bearer1 ${token}`
+            'Authorization': `Bearer ${token}`
         }
     })
     .then(response => {
         if (response.ok) {
             return response.json(); 
-        }
+        } 
     })
     .then(data => {
         document.getElementById('name').textContent = data.name;
