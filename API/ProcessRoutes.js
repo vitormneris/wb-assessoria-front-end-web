@@ -1,8 +1,7 @@
 document.getElementById('processoForm').addEventListener('submit', function(event) {
-    const token = sessionStorage.getItem("token")
-
     event.preventDefault(); 
 
+    const token = sessionStorage.getItem("token")
     const numeroProcesso = document.getElementById('numeroProcesso').value;
 
     fetch('https://wb-backend-48ug.onrender.com/processos', {
@@ -15,6 +14,16 @@ document.getElementById('processoForm').addEventListener('submit', function(even
     })
     .then(response => {
         if (!response.ok) {
+            const div  = document.getElementById('errorMessage')
+            const existingParag = div.querySelector('p');
+    
+            if (existingParag) existingParag.remove()
+    
+            const parag = document.createElement('p');
+            parag.textContent = "Não foi possível consultar o processo - Tente novamento mais tarde!"
+            parag.setAttribute("style", "color: red;");
+            div.appendChild(parag)
+
             throw new Error('A resposta da requisição não teve sucesso');
         }
         return response.json();
