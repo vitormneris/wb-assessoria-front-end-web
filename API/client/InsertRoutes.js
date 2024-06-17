@@ -45,7 +45,7 @@ document.getElementById('insertForm').addEventListener('submit', function(event)
         }
     }
 
-    fetch('http://localhost:8080/clients', {
+    fetch('https://wb-backend-48ug.onrender.com/clients', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
