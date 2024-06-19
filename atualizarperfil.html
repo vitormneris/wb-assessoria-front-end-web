@@ -23,7 +23,7 @@
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <link href="css/perfil.css" rel="stylesheet">
+  <link href="css/updateperfil.css" rel="stylesheet">
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
@@ -106,30 +106,58 @@
   <br><br>
   <div class="perfil">
     <br>
-    <h1 style="font-family: 'Poppins-Bold';">- Perfil -</h1>
+    <h1>- Atualizar Perfil -</h1>
     <br>
-    <p class="field">Nome: <span id="name"></span></p>
-    <p class="field">E-mail: <span id="email"></span></p>
-    <p class="field">CPF: <span id="cpf"></span></p>
-    <p class="field">País: <span id="country"></span></p>
-    <p class="field">Telefones: <span id="phone"></span></p>
-    <p class="field">RNM: <span id="rnm"></span></p>
-
-    <details>
-      <summary style="font-family: 'Poppins'; font-weight: normal;">Mais Informações</summary>
-      <br>
-      <p class="field">Classificação: <span id="rnmClassification"></span></p>
-      <p class="field">Data de validade: <span id="rnmDate"></span></p>
-      <p class="field">Estado: <span id="state"></span></p>
-      <p class="field">Cidade: <span id="city"></span></p>
-      <p class="field">Bairro: <span id="neighborhood"></span></p>
-      <p class="field">Rua: <span id="street"></span></p>
-      <p class="field">Número da residência: <span id="number"></span></p>
-      <br>
-      <div class="button-container">
-        <input type="button" value="Atualizar" onclick="goToUpdateProfile()"> <input type="button" value="Deletar">
+    <form>
+      <div class="field">
+        <input type="text" id="name" name="name" placeholder="Nome" required>
       </div>
-    </details>
+      <div class="field">
+        <input type="email" id="email" name="email" placeholder="E-mail" required>
+      </div>
+      <div class="field">
+        <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
+      </div>
+      <div class="field">
+        <input type="text" id="country" name="country" placeholder="País" required>
+      </div>
+      <div class="field">
+        <input type="text" id="phone" name="phone" placeholder="Telefones" required>
+      </div>
+      <div class="field">
+        <input type="text" id="rnm" name="rnm" placeholder="RNM" required>
+      </div>
+      <br>
+      <details>
+        <summary>Mais Informações</summary>
+        <br>
+        <div class="field">
+          <input type="text" id="rnmClassification" name="rnmClassification" placeholder="Classificação" required>
+        </div>
+        <div class="field">
+          <input type="text" id="rnmDate" name="rnmDate" placeholder="Data de Validade" required>
+        </div>
+        <div class="field">
+          <input type="text" id="state" name="state" placeholder="Estado" required>
+        </div>
+        <div class="field">
+          <input type="text" id="city" name="city" placeholder="Cidade" required>
+        </div>
+        <div class="field">
+          <input type="text" id="neighborhood" name="neighborhood" placeholder="Bairro" required>
+        </div>
+        <div class="field">
+          <input type="text" id="street" name="street" placeholder="Rua" required>
+        </div>
+        <div class="field">
+          <input type="text" id="number" name="number" placeholder="Residência" required>
+        </div>
+      </details>
+
+      <div class="button-container">
+        <input type="button" value="Atualizar">
+      </div>
+    </form>
   </div>
   <br><br>
   <!-- end who section -->
@@ -231,11 +259,7 @@
     </p>
   </section>
   <!-- footer section -->
-  <script>
-    function goToUpdateProfile() {
-      window.location.href = 'atualizarperfil.html';
-    }
-  </script>
+
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript"
