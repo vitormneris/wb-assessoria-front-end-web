@@ -8,7 +8,7 @@ function deleteClient() {
         // https://wb-backend-48ug.onrender.com/
         // http://localhost:8080/
         
-        fetch('http://localhost:8080/clients/token', {
+        fetch('https://wb-backend-48ug.onrender.com/clients/token', {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`

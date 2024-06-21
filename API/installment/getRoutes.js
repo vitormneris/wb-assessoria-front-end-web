@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // https://wb-backend-48ug.onrender.com/
     // http://localhost:8080/
 
-    fetch('http://localhost:8080/installments/token', {
+    fetch('https://wb-backend-48ug.onrender.com/installments/token', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
