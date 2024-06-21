@@ -253,7 +253,7 @@ iframe {
   color: #999999;
   line-height: 1.2;
 
-  content: attr(data-placeholder);
+  
   display: block;
   width: 100%;
   position: absolute;

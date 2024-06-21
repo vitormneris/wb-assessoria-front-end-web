@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const token = sessionStorage.getItem("token")
 
+    //mudar url
     fetch('https://wb-backend-48ug.onrender.com/clients/token', {
         method: 'GET',
         headers: {

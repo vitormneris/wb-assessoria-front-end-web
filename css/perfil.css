@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+.body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  padding-top: 50px;
+}
+
+.perfil {
+  background-color: #fff;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 4px solid #ffc107;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perfil h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Poppins-Bold';
+}
+
+.field {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 13px;
+  background-color: rgba(255, 253, 253, 0.8);
+  border: 1px solid #cfc5c5;
+  border-radius: 5px;
+}
+
+.field span {
+  font-size: 16px;
+  color: #666;
+  display: block;
+  margin-top: 5px;
+}
+
+details summary {
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+details {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+details p {
+  font-size: 13px;
+  color: #666;
+  margin-left: 0;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  details {
+    grid-template-columns: 1fr;
+  }
+  .perfil {
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .perfil h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Poppins-Bold';
+  }
+
+}
+
+.perfil .field {
+  width: calc(100% - 42px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  font-family: 'Poppins';
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-container input[type="button"] {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-container input[type="button"][value="Atualizar"] {
+  background-color: #ffc107; 
+  color: #333;
+}
+
+.button-container input[type="button"][value="Deletar"] {
+  background-color: #e6553b; 
+  color: rgb(0, 0, 0);
+}
+
+.button-container input[type="button"]:hover {
+  background-color: #ecb911; 
+  color: black;
+}
+
+.button-container input[type="button"][value="Deletar"]:hover {
+  background-color: #d22d00; 
+  color: rgb(0, 0, 0);
+}

@@ -9,6 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         "password": password
     }
 
+    //mudar URL
     fetch('https://wb-backend-48ug.onrender.com/authenticate', {
         method: 'POST',
         headers: {

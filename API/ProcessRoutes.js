@@ -11,8 +11,11 @@ document.getElementById('processoForm').addEventListener('submit', function(even
 
     const parag = document.createElement('p');
     parag.textContent = "Processando requisição... aguarde um momento."
-    parag.setAttribute("style", "color: yellow;");
+    parag.setAttribute("style", "color: green;");
     div.appendChild(parag)
+
+    // https://wb-backend-48ug.onrender.com/
+    // http://localhost:8080/
 
     fetch('https://wb-backend-48ug.onrender.com/processos', {
         method: 'POST',

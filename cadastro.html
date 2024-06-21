@@ -39,7 +39,7 @@
 
   <style>
     .wrap-login100 {
-      width: 800px;
+      width: 600px;
     }
   </style>
 </head>
@@ -90,6 +90,7 @@
                 <select id="language-select" onchange="translatePage()">
                   <option value="pt">Português</option>
                   <option value="en">English</option>
+                  <option value="es">Spanish</option>
                 </select>
               </div>
             </div>
@@ -103,137 +104,139 @@
   <!-- contact section -->
   <section class="contact_section layout_padding">
     <div class="container">
-      <div class="container-login100">
-        <div class="wrap-login100">
-          <form class="login100-form validate-form" id="insertForm">
-            <span class="login100-form-title p-b-26">CADASTRO</span>
-            <br>
-            <div class="wrap-input100 validate-input" data-validate="Insira o Nome Completo">
-              <input class="input100" type="text" id="name">
-              <span class="focus-input100" data-placeholder="Insira o Nome Completo"></span>
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" id="insertForm">
+                    <br>
+                    <span class="login100-form-title p-b-26" style="font-family: 'Poppins-Bold';">CADASTRO</span>
+                    <br>
+                    <div class="wrap-input100 validate-input" data-validate="Insira o Nome Completo">
+                        <input class="input100" type="text" id="name" placeholder="Insira o Nome Completo" style="color: #000;">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Insira um E-mail válido">
+                        <input class="input100" type="text" id="email" placeholder="Insira o E-mail" style="color: #000;">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Insira uma Senha válida">
+                        <input class="input100" type="password" id="password" placeholder="Insira a Senha" style="color: #000;">
+                        <span class="focus-input100"></span>
+                        <span class="toggle-password" onclick="togglePasswordVisibility()" style="cursor: pointer; position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">
+                            👁️
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Insira um CPF válido">
+                        <input class="input100" type="text" id="cpf" placeholder="Insira o CPF" style="color: #000;">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Insira um País válido">
+                        <input class="input100" type="text" id="country" placeholder="Insira o País" style="color: #000;">
+                        <span class="focus-input100"></span>
+                    </div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate="Insira um Número de Telefone válido">
+                        <input class="input100" type="tel" id="phone1" placeholder="Insira o 1º Número de Telefone" style="color: #000;">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <details>
+                        <summary style="font-family: 'Poppins';">Adicione mais números de telefone</summary>
+                        <br>
+                        <div class="wrap-input100 validate-input" data-validate="Insira um Número de Telefone válido">
+                            <input class="input100" type="tel" id="phone2" placeholder="Insira o 2º Número de Telefone (Opcional)" style="color: #000;">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Insira um Número de Telefone válido">
+                            <input class="input100" type="tel" id="phone3" placeholder="Insira o 3º Número de Telefone (Opcional)" style="color: #000;">
+                            <span class="focus-input100"></span>
+                        </div>
+                    </details>
+                    <br>
+                    <details>
+                        <summary style="font-family: 'Poppins';">RNM</summary>
+                        <br>
+                        <div class="wrap-input100 validate-input" data-validate="Insira um RNM válido">
+                            <input class="input100" type="text" id="rnm" placeholder="Insira o RNM" style="color: #000;">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Insira uma data de vencimento válida">
+                            <input class="input100" type="date" id="rnmDate" style="color: #000;">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Insira a classificação do RNM válida">
+                            <input class="input100" type="text" id="rnmClassification" placeholder="Insira a Classificação do RNM" style="color: #000;">
+                            <span class="focus-input100"></span>
+                        </div>
+                    </details>
+
+                    <br>
+
+                    <details>
+                        <summary style="font-family: 'Poppins';">Endereço</summary>
+                        <br>
+                        <div class="wrap-input100 validate-input" data-validate="Insira um estado válido">
+                            <input class="input100" type="text" id="state" placeholder="Insira o Estado" style="color: #000;">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Insira uma cidade válida">
+                            <input class="input100" type="text" id="city" placeholder="Insira a Cidade" style="color: #000;">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Insira um bairro válido">
+                            <input class="input100" type="text" id="neighborhood" placeholder="Insira o Bairro" style="color: #000;">
+                            <span class="focus-input100"></span>
+                        </div>
+                        
+                        <div class="wrap-input100 validate-input" data-validate="Insira uma rua válida">
+                            <input class="input100" type="text" id="street" placeholder="Insira a Rua" style="color: #000;">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Insira um CEP válido">
+                            <input class="input100" type="text" id="postalCode" placeholder="Insira o CEP" style="color: #000;">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Insira um numero de residência válido">
+                            <input class="input100" type="text" id="number" placeholder="Insira o Número da Residência" style="color: #000;">
+                            <span class="focus-input100"></span>
+                        </div>
+                    </details>
+
+                    <br>
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn">
+                                Cadastre-se
+                            </button>
+                        </div>
+                    </div>
+                    <div id="message"></div>
+                    <div class="text-center p-t-115">
+                        <span class="txt1">
+                            Já possui cadastro?
+                        </span>
+                        <a class="txt2" href="login.html">
+                            Faça Login
+                        </a>
+                    </div>
+                </form>
             </div>
-
-            <div class="wrap-input100 validate-input" data-validate="Insira um E-mail válido">
-              <input class="input100" type="text" id="email">
-              <span class="focus-input100" data-placeholder="Insira o E-mail"></span>
-            </div>
-
-            <div class="wrap-input100 validate-input" data-validate="Insira uma Senha válida">
-              <input class="input100" type="password" id="password">
-              <span class="focus-input100" data-placeholder="Insira a Senha"></span>
-            </div>
-
-            <div class="wrap-input100 validate-input" data-validate="Insira um CPF válido">
-              <input class="input100" type="text" id="cpf">
-              <span class="focus-input100" data-placeholder="Insira o CPF"></span>
-            </div>
-
-            <div class="wrap-input100 validate-input" data-validate="Insira um País válido">
-              <input class="input100" type="text" id="country">
-              <span class="focus-input100" data-placeholder="Insira o País"></span>
-            </div>
-            
-            <div class="wrap-input100 validate-input" data-validate="Insira um Número de Telefone válido">
-              <input class="input100" type="tel" id="phone1">
-              <span class="focus-input100" data-placeholder="Insira 1º Número de Telefone"></span>
-            </div>
-
-            <details>
-              <summary>Adicionar mais números de telefone</summary>
-
-              <div class="wrap-input100 validate-input" data-validate="Insira um Número de Telefone válido">
-                <input class="input100" type="tel" id="phone2">
-                <span class="focus-input100" data-placeholder="Insira 2º o Número de Telefone (Opcional)"></span>
-              </div>
-
-              <div class="wrap-input100 validate-input" data-validate="Insira um Número de Telefone válido">
-                <input class="input100" type="tel" id="phone3">
-                <span class="focus-input100" data-placeholder="Insira 3º o Número de Telefone (Opcional)"></span>
-              </div>
-            </details>
-
-            <br>
-
-            <details>
-              <summary>RNM</summary>
-
-              <div class="wrap-input100 validate-input" data-validate="Insira um RNM válido">
-                <input class="input100" type="text" id="rnm">
-                <span class="focus-input100" data-placeholder="Insira o RNM"></span>
-              </div>
-
-              <div class="wrap-input100 validate-input" data-validate="Insira uma data de vencimento válida">
-                <input class="input100" type="date" id="rnmDate">
-                <span class="focus-input100" data-placeholder="Insira a data de vencimento do RNM"></span>
-              </div>
-
-              <div class="wrap-input100 validate-input" data-validate="Insira a classificação do RNM válida">
-                <input class="input100" type="text" id="rnmClassification">
-                <span class="focus-input100" data-placeholder="Insira a classificação do RNM"></span>
-              </div>
-            </details>
-
-            <br>
-
-            <details>
-              <summary>Endereço</summary>
-
-              <div class="wrap-input100 validate-input" data-validate="Insira um estado válido">
-                <input class="input100" type="text" id="state">
-                <span class="focus-input100" data-placeholder="Insira o estado"></span>
-              </div>
-
-
-              <div class="wrap-input100 validate-input" data-validate="Insira uma cidade válida">
-                <input class="input100" type="text" id="city">
-                <span class="focus-input100" data-placeholder="Insira a cidade"></span>
-              </div>
-
-              
-              <div class="wrap-input100 validate-input" data-validate="Insira um bairro válido">
-                <input class="input100" type="text" id="neighborhood">
-                <span class="focus-input100" data-placeholder="Insira o bairro"></span>
-              </div>
-                            
-              <div class="wrap-input100 validate-input" data-validate="Insira uma rua válida">
-                <input class="input100" type="text" id="street">
-                <span class="focus-input100" data-placeholder="Insira a rua"></span>
-              </div>
-
-              <div class="wrap-input100 validate-input" data-validate="Insira um CEP válido">
-                <input class="input100" type="text" id="postalCode">
-                <span class="focus-input100" data-placeholder="Insira o CEP"></span>
-              </div>
-
-              <div class="wrap-input100 validate-input" data-validate="Insira um numero de residência válido">
-                <input class="input100" type="text" id="number">
-                <span class="focus-input100" data-placeholder="Insira o número da residência"></span>
-              </div>
-            </details>
-
-            <br>
-            <div class="container-login100-form-btn">
-              <div class="wrap-login100-form-btn">
-                <div class="login100-form-bgbtn"></div>
-                <button class="login100-form-btn">
-                  Cadastre-se
-                </button>
-              </div>
-            </div>
-            <div id="message"></div>
-            <div class="text-center p-t-115">
-              <span class="txt1">
-                Já possui cadastro?
-              </span>
-              <a class="txt2" href="login.html">
-                Faça Login
-              </a>
-            </div>
-          </form>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
+
 
   <div id="dropDownSelect1"></div>
 
@@ -325,12 +328,21 @@
 
   <!-- end info_section -->
 
+  <script>
+    function togglePasswordVisibility() {
+        var passwordField = document.getElementById("password");
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+    }
+    </script>
 
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2020 All Rights Reserved By
-      <a href="https://html.design/">Free Html Templates</a>
+      &copy; 2024 All Rights Reserved By TECHTERA
     </p>
   </section>
   <!-- footer section -->

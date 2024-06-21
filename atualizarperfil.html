@@ -12,17 +12,18 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>WB | Mensalidades </title>
+  <title>WB | Atualizar Perfil </title>
 
   <link href="images/logoWB.png" rel="icon">
 
   <!-- slider stylesheet -->
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
+  <link href="css/updateperfil.css" rel="stylesheet">
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
@@ -31,40 +32,33 @@
   <link href="css/responsive.css" rel="stylesheet" />
   <!-- Menu dropDown style -->
   <link href="css/menuDropdown.css" rel="stylesheet" />
-  
-  <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
-  <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
-  <script src="js/authenticate.js"></script>
-  <script src="API/installment/getRoutes.js"></script>
 
-  <style>
-    .card {
-      width: 900px;
-    }
-    h2 {
-      border: none;
-      outline: none;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="js/authenticate.js"></script>
+  <script src="API/client/getRoutes.js"></script>
 </head>
 
 <body class="sub_page">
+
   <div class="hero_area">
+    <!-- header section strats -->
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+
           <a class="navbar-brand" href="index.html">
             <span>
               <img src="images/logoWB.png" alt="logoWB" style="width: 80px; margin-left: 100px;">
             </span>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav" >
+              <ul class="navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link" href="about.html" data-translate-key="about">Sobre </a>
                 </li>
@@ -109,22 +103,70 @@
   </div>
 
 
-  <section class="contact_section layout_padding">
-    <div class="container">
-
-      <div class="heading_container" style="margin-bottom: 50px; text-align: center; width: 100%;"">
-        <h2 style="text-align: center; width: 100%;">
-          -Mensalidades-
-        </h2>
-    </div>
-      <div class="">
-        <div class="">
-          <div class="row">
-            <div id="mensalidades"></div>
-          </div>
+  <!-- who section -->
+  <br><br>
+  <div class="perfil">
+    <br>
+    <h1>- Atualizar Perfil -</h1>
+    <br>
+    <form>
+      <div class="field">
+        <input type="text" id="name" name="name" placeholder="Nome" required>
       </div>
-    </div>
-  </section>
+      <div class="field">
+        <input type="email" id="email" name="email" placeholder="E-mail" required>
+      </div>
+      <div class="field">
+        <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
+      </div>
+      <div class="field">
+        <input type="text" id="country" name="country" placeholder="País" required>
+      </div>
+      <div class="field">
+        <input type="text" id="phone" name="phone" placeholder="Telefones" required>
+      </div>
+      <br>
+      <details>
+        <summary>RNM</summary>
+        <br>
+        <div class="field">
+          <input type="text" id="rnm" name="rnm" placeholder="RNM" required>
+        </div>
+        <div class="field">
+          <input type="text" id="rnmClassification" name="rnmClassification" placeholder="Classificação" required>
+        </div>
+        <div class="field">
+          <input type="text" id="rnmDate" name="rnmDate" placeholder="Data de Validade" required>
+        </div>
+        </details>
+        <br>
+        <details>
+          <summary>Endereço</summary>
+          <br>
+          <div class="field">
+            <input type="text" id="state" name="state" placeholder="Estado" required>
+          </div>
+          <div class="field">
+            <input type="text" id="city" name="city" placeholder="Cidade" required>
+          </div>
+          <div class="field">
+            <input type="text" id="neighborhood" name="neighborhood" placeholder="Bairro" required>
+          </div>
+          <div class="field">
+            <input type="text" id="street" name="street" placeholder="Rua" required>
+          </div>
+          <div class="field">
+            <input type="text" id="number" name="number" placeholder="Residência" required>
+          </div>
+      </details>
+      <div class="button-container">
+        <input type="button" value="Atualizar">
+      </div>
+    </form>
+  </div>
+  <br><br>
+  <!-- end who section -->
+
 
   <!-- info section -->
   <section class="info_section ">
@@ -184,29 +226,30 @@
                     <img src="images/insta.png" alt="instagramLogo" style="width: 30px;">
                   </div>
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=5511914258886&text=Ol%C3%A1%2C%20Welcome2Brazil!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%20%F0%9F%87%A7%F0%9F%87%B7" target="_blank"">
-                  <div class="insta-box b-2">
-                    <img src="images/whats.png" alt="whastappLogo" style="width: 30px;">
-                  </div>
-                </a>
+                <a href="https://api.whatsapp.com/send?phone=5511914258886&text=Ol%C3%A1%2C%20Welcome2Brazil!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%20%F0%9F%87%A7%F0%9F%87%B7"
+                  target="_blank"">
+                  <div class=" insta-box b-2">
+                  <img src="images/whats.png" alt="whastappLogo" style="width: 30px;">
               </div>
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="info_form ">
-            <h5 data-translate-key="news">
-              Para receber novidades:
-            </h5>
-            <form action="">
-              <input type="email" placeholder="Email">
-              <button data-translate-key="send">
-                Enviar
-              </button>
-            </form>
-          </div>
+      </div>
+      <div class="col-md-3">
+        <div class="info_form ">
+          <h5 data-translate-key="news">
+            Para receber novidades:
+          </h5>
+          <form action="">
+            <input type="email" placeholder="Email">
+            <button data-translate-key="send">
+              Enviar
+            </button>
+          </form>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -216,17 +259,18 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2024 All Rights Reserved By TECHTERA
+      &copy; 2020 All Rights Reserved By TECHTERA
     </p>
   </section>
   <!-- footer section -->
-  
-  <script src="js/Authenticate.js"></script>
+
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- end owl carousel script -->
   <script src="js/translate.js"></script>
   <script src="js/logOut.js"></script>
 </body>
+
 </html>
