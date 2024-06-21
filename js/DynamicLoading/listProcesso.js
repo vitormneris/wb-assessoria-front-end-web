@@ -1,6 +1,6 @@
-const list = document.getElementById("ListagemProcessos")
+const list = document.getElementById("ListagemProcessos");
 
-let sessionData = JSON.parse(sessionStorage.getItem('data'))
+let sessionData = JSON.parse(sessionStorage.getItem('data'));
 
 console.log(sessionData);
 
@@ -18,19 +18,19 @@ sessionData.forEach(element => {
                     <div class="align-self-center">
                         <i class="icon-wallet success font-large-2" style="padding: 0 20px 0 0; color: rgb(233, 179, 16);"></i>
                     </div>
-                    <div class="media-body">                        
-                        <h5 style="font-family: 'Poppins'; font-size: 18px;"><b background: linear-gradient(#B07908, #E8B158); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Nome do Processo:</b> ${nomeProcesso}</h5>
+                    <div class="media-body">
+                        <h5 style="font-family: 'Poppins'; font-size: 18px;"><b style="background: linear-gradient(#B07908, #E8B158); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Nome do Processo:</b> ${nomeProcesso}</h5>
                         <br>
-                        <h5 style="font-family: 'Poppins'; font-size: 18px;"><b style="background: linear-gradient(#B07908, #E8B158); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">N° do Processo:</b> ${numeroProcesso}</h5>
-                         <br>
+                        <h5 style="font-family: 'Poppins'; font-size: 18px;"><b style="background: linear-gradient(#B07908, #E8B158); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">N° do Processo:</b> ${numeroProcesso}</h5>
+                        <br>
                         <details>
-                            <summary style="font-family: 'Poppins-Bold'; background: linear-gradient(#B07908, #E8B158); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Detalhes</summary>
+                            <summary style="font-family: 'Poppins-Bold'; background: linear-gradient(#B07908, #E8B158); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Detalhes</summary>
                             <br>
                             <div class="d-flex flex-column">
-                                <p class="py-2 my-1" style="width:fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Tribunal: ${tribunal}</p>
-                                <p class="py-2 my-1" style="width:fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Nome: ${movimentoNome}</p>
-                                <p class="py-2 my-1" style="width:fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Última movimentação: ${movimentoNome}</p>
-                                <p class="py-2 my-1" style="width:fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Data e Hora: ${movimentoDataHora}</p>
+                                <p class="py-2 my-1" style="width: fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Tribunal: ${tribunal}</p>
+                                <p class="py-2 my-1" style="width: fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Nome: ${movimentoNome}</p>
+                                <p class="py-2 my-1" style="width: fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Última movimentação: ${movimentoNome}</p>
+                                <p class="py-2 my-1" style="width: fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Data e Hora: ${movimentoDataHora}</p>
                             </div>
                         </details>
                     </div>

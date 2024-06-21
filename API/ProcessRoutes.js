@@ -17,7 +17,7 @@ document.getElementById('processoForm').addEventListener('submit', function(even
     // https://wb-backend-48ug.onrender.com/
     // http://localhost:8080/
 
-    fetch('http://localhost:8080/processos', {
+    fetch('https://wb-backend-48ug.onrender.com/processos', {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${token}`,
