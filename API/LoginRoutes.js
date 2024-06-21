@@ -39,7 +39,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     .then(text => {
         if (text != "Login not authorized") {
             sessionStorage.setItem("token", text)
-            window.location.href = "processo.html"
+            window.location.href = "/Dashboard/Processos.html"
             return "Login sucessfully"
         }
     })

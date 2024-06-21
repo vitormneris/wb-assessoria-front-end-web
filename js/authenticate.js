@@ -13,7 +13,7 @@ if (token != null)  {
     .then(response => {
         if (!response.ok) {
             sessionStorage.removeItem("token")
-            document.location.href = "login.html"
+            document.location.href = "../login.html"
         }
     })
     .catch(error => {
@@ -21,5 +21,5 @@ if (token != null)  {
     });
 
 } else {
-    document.location.href = "login.html"
+    document.location.href = "../login.html"
 }

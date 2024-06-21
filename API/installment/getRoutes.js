@@ -19,41 +19,32 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Success:', data)
         const list = document.getElementById("mensalidades")
 
-        numb = 0
         data.forEach(element => {
-            const numberOfInstallment = data[numb].numberOfInstallment;
-            const description = data[numb].description;
-            const amount = data[numb].amount;
-            let dueDate = data[numb].dueDate;
-            const paymentStatus = data[numb].paymentStatus;
+            const numberOfInstallment = element.numberOfInstallment;
+            const description = element.description;
+            const amount = element.amount;
+            let dueDate = element.dueDate;
+            const paymentStatus = element.paymentStatus;
 
             dueDate = new Date(dueDate) 
             const dueDateString = ('0' + dueDate.getDate()).slice(-2) + "/" + ('0' + dueDate.getMonth()).slice(-2) + "/" + dueDate.getFullYear()
 
-            numb++
             list.innerHTML += 
                     `
-                    <div class="col-md-9 mx-auto">
-                        <div class="card">
-                        <div class="card-body cleartfix">
-                            <div class="media align-items-stretch">
-        
-                            <div class="align-self-center">
+                        <div class="card w-full">
+                            <div class="">
                                 <i class="icon-wallet success font-large-2" style="padding: 0 20px 0 0; color: rgb(233, 179, 16);"></i>
-                            </div>
-                            <div class="media-body">
+                            <div class="">
                                 <h3> ${description} </h3>
                                 <h4>N° da parcela: ${numberOfInstallment} / ${data.length}</h4>
                                 <h4>Vencimento:  ${dueDateString} </h4>
                                 <span style="background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;"> ${paymentStatus} </span>
                             </div>
-                            <div class="align-self-center">
+                            <div class="">
                                 <h2>R$ ${amount.toFixed(2)} </h2>
                             </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
                     `
         });
         

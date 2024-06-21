@@ -51,8 +51,9 @@ body {
   content: "";
   position: absolute;
   top: 50%;
-  width: 40px;
-  height: 1px;
+  width: 10rem;
+  height: 0.1rem;
+  background-color: #fec016;
 }
 
 .heading_container h2::before {
