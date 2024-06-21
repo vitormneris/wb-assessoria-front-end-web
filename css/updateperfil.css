@@ -1,7 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f0f0;
-    padding-top: 50px;
   }
   
   .perfil {
@@ -93,4 +92,16 @@ body {
     color: black;
   }
   
+
+  @media (max-width: 600px) {
+    .perfil {
+      max-width: 380px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+  
+  }
   
