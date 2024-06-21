@@ -120,24 +120,26 @@
           <div class="row">
             <div class="col-md-9 mx-auto">
               <div class="contact-form">
-                <form action="">
+                <form id="contactForm">
                   <div>
-                    <input type="text" data-translate-key="full_name" placeholder="Nome completo ">
+                    <input type="text" data-translate-key="full_name" id="name" placeholder="Nome completo " style="color: black;">
                   </div>
                   <div>
-                    <input type="text" data-translate-key="phone" placeholder="Telefone">
+                    <input type="text" data-translate-key="phone" id="phone" placeholder="Telefone" style="color: black;">
                   </div>
                   <div>
-                    <input type="email" data-translate-key="email" placeholder="Email">
+                    <input type="email" data-translate-key="email" id="email" placeholder="Email" style="color: black;">
                   </div>
                   <div>
-                    <input type="text" data-translate-key="message" placeholder="Mensagem" class="input_message">
+                    <input type="text" data-translate-key="message" id="message" placeholder="Mensagem" style="color: black;">
                   </div>
                   <div class="d-flex justify-content-center" >
                     <button type="submit" class="btn_on-hover" data-translate-key="send">
                       Enviar
                     </button>
                   </div>
+                  <br>
+                  <div id="messageContact" class="d-flex justify-content-center"></div>
                 </form>
               </div>
             </div>
@@ -251,5 +253,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/translate.js"></script></body>
     <script src="js/logOut.js"></script>
+    <script src="API/contact.js"></script></body>
 
 </html>
