@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const token = sessionStorage.getItem("token")
 
-    //mudar url
-    fetch('https://wb-backend-48ug.onrender.com/clients/token', {
+    // https://wb-backend-48ug.onrender.com/
+    // http://localhost:8080/
+    
+    fetch('http://localhost:8080/clients/token', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -14,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } 
     })
     .then(data => {
+        sessionStorage.setItem("client", JSON.stringify(data))
         document.getElementById('name').textContent = data.name;
         document.getElementById('email').textContent = data.email;
         document.getElementById('cpf').textContent = data.cpf;

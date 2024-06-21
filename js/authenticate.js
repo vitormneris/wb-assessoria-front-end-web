@@ -1,7 +1,10 @@
 const token = sessionStorage.getItem("token")
 
+// https://wb-backend-48ug.onrender.com/
+// http://localhost:8080/
+
 if (token != null)  {
-    fetch('https://wb-backend-48ug.onrender.com/protected', {
+    fetch('http://localhost:8080/client/protected', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`

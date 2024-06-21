@@ -1,17 +1,18 @@
-document.getElementById('insertForm').addEventListener('submit', function(event) {
+document.getElementById('updateForm').addEventListener('submit', function(event) {
     event.preventDefault()
 
+    const token = sessionStorage.getItem("token")
+
     const name = document.getElementById('name').value
-    const password = document.getElementById('password').value
     const email = document.getElementById('email').value
     const cpf = document.getElementById('cpf').value
-    const rnm = document.getElementById('rnm').value
-    const rnmClassification = document.getElementById('rnmClassification').value
-    const rnmDate = document.getElementById('rnmDate').value
     const country = document.getElementById('country').value
     const phone1 = document.getElementById('phone1').value
     const phone2 = document.getElementById('phone2').value
     const phone3 = document.getElementById('phone3').value
+    const rnm = document.getElementById('rnm').value
+    const rnmClassification = document.getElementById('rnmClassification').value
+    const rnmDate = document.getElementById('rnmDate').value
     const state = document.getElementById('state').value
     const city = document.getElementById('city').value
     const neighborhood = document.getElementById('neighborhood').value
@@ -19,9 +20,8 @@ document.getElementById('insertForm').addEventListener('submit', function(event)
     const postalCode = document.getElementById('postalCode').value
     const number = document.getElementById('number').value
 
-    newUser = {
+    userUpdated = {
         "name": name,
-        "password": password,
         "email": email,
         "cpf": cpf,
         "rnm": { 
@@ -45,16 +45,19 @@ document.getElementById('insertForm').addEventListener('submit', function(event)
         }
     }
 
+    console.log("DATA: ", userUpdated)
+
 
     // https://wb-backend-48ug.onrender.com/
     // http://localhost:8080/
 
-    fetch('http://localhost:8080/clients', {
-        method: 'POST',
+    fetch('http://localhost:8080/clients/token', {
+        method: 'PUT',
         headers: {
+            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(newUser)
+        body: JSON.stringify(userUpdated)
     })
     .then(async response => {
         const div  = document.getElementById('message')
@@ -63,18 +66,19 @@ document.getElementById('insertForm').addEventListener('submit', function(event)
         if (existingParag) existingParag.remove()
         
         const parag = document.createElement('p')
-        if (response.status === 201) {
-            parag.textContent = "Conta criada com sucesso!"
+        if (response.status === 200) {
+            parag.textContent = "Conta atualizada com sucesso!"
             parag.setAttribute("style", "color: green;")
             div.appendChild(parag)
-            return "Sucess: User inserted."
+            sessionStorage.setItem("client", JSON.stringify(userUpdated))
+            return "Sucess: User updated."
         } 
 
         const responseObject = JSON.parse(await response.text());
         parag.textContent = responseObject.message
         parag.setAttribute("style", "color: red;")
         div.appendChild(parag)
-        return "Error: User doesn't inserted."
+        return "Error: User doesn't updated."
     })
     .then(data => {
         console.log(data)
