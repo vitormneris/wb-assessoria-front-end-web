@@ -5,6 +5,7 @@ let sessionData = JSON.parse(sessionStorage.getItem('data'));
 console.log(sessionData);
 
 sessionData.forEach(element => {
+   
     const nomeProcesso = element.informations.classe.nome;
     const numeroProcesso = element.informations.numeroProcesso.numerdoDoprocesso;
     const tribunal = element.informations.tribunal;

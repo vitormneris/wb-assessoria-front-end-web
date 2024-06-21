@@ -2,6 +2,7 @@
 <head lang="pt-br">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../js/authenticate.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="../css/style.css" rel="stylesheet"/>
   <link href="../css/responsive.css" rel="stylesheet" />
@@ -12,9 +13,9 @@
 <body class="font-[Poppins] flex flex-row">
     <aside class="z-10 fixed h-full rounded-r-lg bg-slate-800 w-[40%] lg:w-[20%] space-y-80 min-[320px]:space-y-32 flex flex-col justify-center content-center">
         <div class="flex flex-col items-center text-center pt-4">
-            <img src="../images/logoWB.png" alt="logoWB" class="size-12 2xl:size-24 my-2">
+            <a href="../index.html"><img src="../images/logoWB.png" alt="logoWB" class="size-12 2xl:size-24 my-2"></a>
             <button class="cursor-default mx-4 p-4 py-3 rounded-md bg-amber-400">
-                <p class="">Bem vindo Fulaninho!!</p>
+                <p class="text-slate-800 text-2xl lg:text-base">Bem vindo!!</p>
             </button>
         </div>
         <div class=" gap-2 flex flex-col justify-center content-center">
@@ -36,7 +37,7 @@
                   </svg>
                 <p class=" text-white  group-hover:text-slate-800 text-xl lg:text-base">Mensalidades</p>
             </a>
-            <a href ="" class="group flex flex-row justify-center gap-3 py-2 text-center hover:bg-amber-400   duration-150">
+            <a href ="Perfil.html" class="group flex flex-row justify-center gap-3 py-2 text-center hover:bg-amber-400   duration-150">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 group-hover:stroke-slate-800 stroke-white">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>                  
@@ -45,7 +46,7 @@
         </div>
       
        <div class=" flex flex-row justify-center text-center pb-4">
-        <button class="group flex flex-row py-2 px-4 rounded-md bg-amber-300 hover:bg-amber-400 duration-150">
+        <button onclick="logOut()" class="group flex flex-row py-2 px-4 rounded-md bg-amber-300 hover:bg-amber-400 duration-150">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-slate-800">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
               </svg>              
@@ -56,45 +57,57 @@
 
     <!-- TAG DA MAIN -->
     <main class="flex flex-col items-center ml-[40%]  lg:ml-[20%] p-4 w-full">
-    </div>
+        <section class="contact_section layout_padding w-full" id="ConsultaP">
+            <div class="">
+                  <div class="row ">
+                    <div class="col-md-9 mx-auto">
+                      <div class="contact-form">
+                         <div class="heading_container" style="display: flex; flex-direction: column; align-items: center;">
+                        <h2 data-translate-key="consulta_processual" class="text-2xl sm:text-4xl">
+                          Consulta Processual
+                        </h2>
+                      
+                        <h6 data-translate-key="consulta_desc">
+                          Consultar processos pelo número em um clique
+                        </h6>
+                        <br>
+                      </div>
+                        <form class ="ProcessoForm" method="POST" id ="processoForm">
+                          <div>
+                            <input id="numeroProcesso" type="text" placeholder="Digite o número do processo"  style="padding-right: 40px; background-image: url('images/search-icon.png'); background-repeat: no-repeat; background-position: right 10px center; background-size: 20px; color:black;" >
+                          </div>
+                          
+                          <div class="flex flex-row justify-center">
+                            <button type="submit" id="submit" data-translate-key="btn_consultar" class="w-fit btn_on-hover">
+                              Consultar
+                            </button>
+                          </div>
+                          <br>
+                          <div id="message" style="display: flex; flex-direction: column; align-items: center;"></div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </section>
      
-    <section class="contact_section layout_padding">
+    <section class="contact_section layout_padding w-full" id="Processos" style="display: none;">
       <div class="container">
   
-        <div class="heading_container" >
-          <h2>
+        <div class="heading_container " style="margin-bottom: 50px; display: flex; flex-direction: column; align-items: center;">
+          <h2 class="text-2xl sm:text-4xl">
             Listagem de Processos
           </h2>
         </div>
             <div class="row">
                 <div id="ListagemProcessos" >
-                    <div class="card my-1">
-                        <div class="card-body clearfix">
-                            <div class="media align-items-stretch">
-                                <div class="align-self-center">
-                                    <i class="icon-wallet success font-large-2" style="padding: 0 20px 0 0; color: rgb(233, 179, 16);"></i>
-                                </div>
-                                <div class="media-body">                        
-                                    <h5>Nome do Processo: ${nomeProcesso}</h5>
-                                    <h5>N° do Processo: ${numeroProcesso}</h5>
-                                    <details>
-                                        <summary>Detalhes</summary>
-                                        <div class="d-flex flex-column">
-                                            <p class="py-2 my-1" style="width:fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Tribunal: ${tribunal}</p>
-                                            <p class="py-2 my-1" style="width:fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Nome: ${movimentoNome}</p>
-                                            <p class="py-2 my-1" style="width:fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Última movimentação: ${movimentoNome}</p>
-                                            <p class="py-2 my-1" style="width:fit-content; background-color: rgb(227, 227, 227); border-radius: 10px; padding: 0 8px;">Data e Hora: ${movimentoDataHora}</p>
-                                        </div>
-                                    </details>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>  
     </section>
     </main>
-    <script src="../js/DynamicLoading/listProcesso.js"></script>
+    <script src="../API/ProcessRoutes.js"></script>
+    <script src="../js/logOut.js"></script>
 </body>
 </html>

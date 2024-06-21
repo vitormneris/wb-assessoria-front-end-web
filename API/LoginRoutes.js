@@ -8,9 +8,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         "email": email,
         "password": password
     }
-
+        // https://wb-backend-48ug.onrender.com/
+    // http://localhost:8080/
     //mudar URL
-    fetch('https://wb-backend-48ug.onrender.com/authenticate', {
+    fetch(' https://wb-backend-48ug.onrender.com/authenticate', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -22,7 +23,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
         if (text != "") {
             sessionStorage.setItem("token", text)
-            window.location.href = "processo.html"
+            window.location.href = "/Dashboard/Processos.html"
             return "Login sucessfully"
         }
 

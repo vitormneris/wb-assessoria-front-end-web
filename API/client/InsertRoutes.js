@@ -46,7 +46,8 @@ document.getElementById('insertForm').addEventListener('submit', function(event)
     }
 
     //MUDAR url
-
+    // https://wb-backend-48ug.onrender.com/
+    // http://localhost:8080/
     fetch('https://wb-backend-48ug.onrender.com/clients', {
         method: 'POST',
         headers: {

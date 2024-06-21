@@ -1,7 +1,8 @@
 const token = sessionStorage.getItem("token")
-
+// https://wb-backend-48ug.onrender.com/
+    // http://localhost:8080/
 if (token != null)  {
-    fetch('https://wb-backend-48ug.onrender.com/protected', {
+    fetch('http://localhost:8080/protected', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -10,7 +11,7 @@ if (token != null)  {
     .then(response => {
         if (!response.ok) {
             sessionStorage.removeItem("token")
-            document.location.href = "login.html"
+            document.location.href = "../login.html"
         }
     })
     .catch(error => {
@@ -18,5 +19,5 @@ if (token != null)  {
     });
 
 } else {
-    document.location.href = "login.html"
+    document.location.href = "../login.html"
 }
