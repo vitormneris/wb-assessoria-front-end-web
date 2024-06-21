@@ -108,30 +108,31 @@
     <br>
     <h1 style="font-family: 'Poppins-Bold';" data-translate-key="profile">- Perfil -</h1>
     <br>
-    <p class="field" data-translate-key="name">Nome: <span id="name"></span></p>
+    <p class="field">Nome: <span id="name"></span></p>
     <p class="field">E-mail: <span id="email"></span></p>
     <p class="field">CPF: <span id="cpf"></span></p>
-    <p class="field" data-translate-key="country">País: <span id="country"></span></p>
-    <p class="field" data-translate-key="phones">Telefones: <span id="phone"></span></p>
+    <p class="field">País: <span id="country"></span></p>
+    <p class="field">Telefones: <span id="phone"></span></p>
     <details>
       <summary>RNM</summary>
       <br>
       <p class="field">RNM: <span id="rnm"></span></p>
-      <p class="field" data-translate-key="classification">Classificação: <span id="rnmClassification"></span></p>
-      <p class="field" data-translate-key="date_expiration">Data de validade: <span id="rnmDate"></span></p>
+      <p class="field">Classificação: <span id="rnmClassification"></span></p>
+      <p class="field">Data de validade: <span id="rnmDate"></span></p>
     </details>
     <details>
       <summary style="font-family: 'Poppins'; font-weight: normal;">Endereço</summary>
       <br>
-      <p class="field" data-translate-key="state">Estado: <span id="state"></span></p>
-      <p class="field" data-translate-key="city">Cidade: <span id="city"></span></p>
-      <p class="field" data-translate-key="neighborhood">Bairro: <span id="neighborhood"></span></p>
-      <p class="field" data-translate-key="road">Rua: <span id="street"></span></p>
-      <p class="field" data-translate-key="residence_number">Número da residência: <span id="number"></span></p>
+      <p class="field">Estado: <span id="state"></span></p>
+      <p class="field">Cidade: <span id="city"></span></p>
+      <p class="field">Bairro: <span id="neighborhood"></span></p>
+      <p class="field">Rua: <span id="street"></span></p>
+      <p class="field">Número da residência: <span id="number"></span></p>
     </details>
     <br>
     <div class="button-container">
-      <input type="button" value="Atualizar" onclick="goToUpdateProfile()"> <input type="button" value="Deletar">
+      <input type="button" value="Atualizar" onclick="goToUpdateProfile()"> 
+      <input type="button" value="Deletar" onclick="deleteClient()">
     </div>
   </div>
   <br><br>
@@ -245,6 +246,7 @@
   <!-- end owl carousel script -->
   <script src="js/translate.js"></script>
   <script src="js/logOut.js"></script>
+  <script src="API/client/deleteRoutes.js"></script>
 </body>
 
 </html>
