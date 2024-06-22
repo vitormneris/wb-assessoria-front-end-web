@@ -24,7 +24,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // https://wb-backend-48ug.onrender.com/
     // http://localhost:8080/
 
-    fetch('http://localhost:8080/contact', {
+    fetch('https://wb-backend-48ug.onrender.com/contact', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
