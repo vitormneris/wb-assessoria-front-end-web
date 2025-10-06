@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const token = sessionStorage.getItem("token")
 
-    // https://wb-backend-48ug.onrender.com/
-    // http://localhost:8080/
-    
-    fetch('https://wb-backend-48ug.onrender.com/clients/token', {
+    fetch('http://localhost:8084/clients/token', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`

@@ -43,12 +43,9 @@ document.getElementById('insertForm').addEventListener('submit', function(event)
             "postalCode": postalCode,
             "number": number
         }
-    }
+    }  
 
-    // https://wb-backend-48ug.onrender.com/
-    // http://localhost:8080/
-
-    fetch('https://wb-backend-48ug.onrender.com/clients', {
+    fetch('http://localhost:8084/clients', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
